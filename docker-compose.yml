@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  # Service 1: Our Custom Python App
+  web-app:
+    build: ./Python
+    depends_on:
+      - db
+
+  # Service 2: The MongoDB Database
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
