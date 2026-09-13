@@ -1,0 +1,5 @@
+{
+    "api_data": {
+        "error": "HTTPSConnectionPool(host='typicode.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='typicode.com', port=443): Failed to resolve 'typicode.com' ([Errno 11001] getaddrinfo failed)\"))"
+    }
+}
