@@ -1,0 +1,19 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.10'
+  displayName: 'Step 1: Fetch Runtime Python Layer'
+
+- script: |
+    pip install psutil requests paramiko schedule flask
+  displayName: 'Step 2: Build Project System Dependencies'
+
+- script: |
+    python Python/system_health.py
+  displayName: 'Step 3: Trigger System Telemetry Verification Checks'
